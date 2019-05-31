@@ -14,7 +14,13 @@ import com.example.repository.HotelsRepository;
 public class HotelService {
 	@Autowired
 	private HotelsRepository hotelRepository;
-	
+
+	/**
+	 * リポジトリーのホテル検索メソッドを利用するクラス.
+	 * 
+	 * @param inputPrice 入力された金額
+	 * @return 検索のかかったホテル情報
+	 */
 	public List<Hotel> searchByLessThanPrice(Integer inputPrice) {
 		return hotelRepository.searchByLessThanPrice(inputPrice);
 	}
