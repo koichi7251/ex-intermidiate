@@ -10,18 +10,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.domain.BaseballTeam;
 import com.example.servise.BaseballTeamService;
 
+<<<<<<< HEAD
 /**
  * 野球チームの一覧、詳細表示の操作をする.
  * 
  * @author koichi.nagata
  *
  */
+=======
+>>>>>>> 7bb411904b0855a7d13819dd9cc62c6629b74cbd
 @Controller
 @RequestMapping("/teamList")
 public class BaseBallTeamController {
 	@Autowired
 	private BaseballTeamService baseBallTeamService;
 
+<<<<<<< HEAD
 	/**
 	 * 野球チーム一覧のページを表示する.
 	 * 
@@ -45,6 +49,18 @@ public class BaseBallTeamController {
 	@RequestMapping("/teamDetail")
 	public String showDetail(Integer id, Model model) {
 		BaseballTeam teamDetail = baseBallTeamService.showDetail(id);
+=======
+	@RequestMapping("/")
+	public String showList(Model model) {
+		List<BaseballTeam> teamList = baseBallTeamService.showList();
+		model.addAttribute("teamList",teamList);
+		return "team-list-page";
+	}
+
+	@RequestMapping("/teamDetail")
+	public String showDetail(String teamName, Model model) {
+		BaseballTeam teamDetail = baseBallTeamService.showDetail(teamName);
+>>>>>>> 7bb411904b0855a7d13819dd9cc62c6629b74cbd
 		model.addAttribute("teamDetail", teamDetail);
 		return "team-detail-page";
 	}

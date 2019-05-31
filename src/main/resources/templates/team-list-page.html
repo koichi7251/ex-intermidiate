@@ -8,8 +8,12 @@
 <h2>野球チーム一覧</h2>
 <form action="finished.html" th:action="@{/teamList/teamDetail}" method="post">
 <div th:each="teamName:${teamList}">
+<<<<<<< HEAD
 	<a th:text="${teamName.teamName}" th:href="@{'/teamList/teamDetail?id='+ ${teamName.id}}">dummy</a>
 	</div>
+=======
+	<div th:text="${teamName.teamName}">dummy</div></div>
+>>>>>>> 7bb411904b0855a7d13819dd9cc62c6629b74cbd
 </form>
 </body>
 </html>
