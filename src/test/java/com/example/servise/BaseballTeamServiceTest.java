@@ -57,9 +57,9 @@ public class BaseballTeamServiceTest {
 	@Test
 	public void testShowDetail() {
 		System.out.println("詳細表示するテスト開始");
-		assertThat("詳細が間違っています" ,service.showDetail("読売ジャイアンツ").getHeadquarters(), is("東京ドーム（東京都・文京区）"));
-		assertThat("詳細が間違っています" ,service.showDetail("阪神タイガース").getHeadquarters(), is("阪神甲子園球場（兵庫県・西宮市）"));
-		assertThat("詳細が間違っています" ,service.showDetail("東京ヤクルトスワローズ").getHeadquarters(), is("明治神宮野球場（東京都・新宿区）"));
+		assertThat("詳細が間違っています" ,service.showDetail(1).getHeadquarters(), is("東京ドーム（東京都・文京区）"));
+		assertThat("詳細が間違っています" ,service.showDetail(2).getHeadquarters(), is("阪神甲子園球場（兵庫県・西宮市）"));
+		assertThat("詳細が間違っています" ,service.showDetail(6).getHeadquarters(), is("明治神宮野球場（東京都・新宿区）"));
 		
 		
 		System.out.println("詳細表示するテスト終了");

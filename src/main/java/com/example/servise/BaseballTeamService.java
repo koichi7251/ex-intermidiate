@@ -33,11 +33,12 @@ public class BaseballTeamService {
 
 	/**
 	 * リポジトリーでチーム詳細を取得の操作をする.
+	 * 
 	 * @param teamName チーム名
 	 * @return チーム詳細のリスト
 	 */
-	public BaseballTeam showDetail(String teamName) {
-		BaseballTeam teamDetail = baseballteamRepository.showDetail(teamName);
+	public BaseballTeam showDetail(Integer id) {
+		BaseballTeam teamDetail = baseballteamRepository.showDetail(id);
 		return teamDetail;
 	}
 }

@@ -51,9 +51,9 @@ public class BaseballTeamRepository {
 	 * @param teamName チーム名
 	 * @return チーム情報
 	 */
-	public BaseballTeam showDetail(String teamName) {
-		String sql = "SELECT id,league_name, team_name, headquarters, inauguration, history FROM teams where team_name = :teamName";
-		SqlParameterSource param = new MapSqlParameterSource().addValue("teamName", teamName);
+	public BaseballTeam showDetail(Integer id) {
+		String sql = "SELECT id,league_name, team_name, headquarters, inauguration, history FROM teams where id = :id";
+		SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
 
 		BaseballTeam team = template.queryForObject(sql, param, BASEBALLTEAM_ROW_MAPPER);
 
